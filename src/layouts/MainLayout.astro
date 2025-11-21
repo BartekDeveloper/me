@@ -1,0 +1,51 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/ui/Navbar.svelte';
+import GridBackground from '../components/ui/GridBackground.svelte';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { 
+	title = "Portfolio | ZOTA",
+	description = "Personal portfolio showcasing my projects and skills."
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-background-deep text-white antialiased selection:bg-neon-green selection:text-black">
+        <!-- Global Background Gradients -->
+        <div class="fixed inset-0 z-[-2] pointer-events-none">
+            <div class="absolute inset-0 bg-gradient-to-b from-background-deep via-[#150515] to-black"></div>
+            <div class="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-neon-purple/20 to-transparent opacity-40 blur-[100px]"></div>
+            <div class="absolute top-0 left-0 w-full h-[300px] bg-gradient-to-b from-neon-purple/10 to-transparent opacity-20 blur-[60px]"></div>
+            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-neon-green/5 rounded-full blur-[120px]"></div>
+        </div>
+		<div class="relative min-h-screen">
+        <GridBackground />
+        <Navbar client:load />
+        
+        <main class="relative z-10 min-h-screen flex flex-col">
+          <slot />
+        </main>
+      </div>
+
+        <footer class="py-10 text-center text-gray-500 text-sm relative z-10 border-t border-white/5 mt-20 bg-black/50 backdrop-blur-md">
+            <p>&copy; {new Date().getFullYear()} Zota. Built with Astro, Svelte & Tailwind.</p>
+        </footer>
+	</body>
+</html>

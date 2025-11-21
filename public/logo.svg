@@ -1,0 +1,20 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neon-gradient" x1="0" y1="0" x2="100%" y2="0">
+      <stop offset="0%" stop-color="#39ff14" />
+      <stop offset="100%" stop-color="#00f3ff" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main Text -->
+  <text x="10" y="45" font-family="'Inter', sans-serif" font-weight="900" font-size="48" fill="url(#neon-gradient)" filter="url(#glow)" letter-spacing="-2">
+    ZOTA<tspan fill="#39ff14">.</tspan>
+  </text>
+</svg>

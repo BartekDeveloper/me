@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/svelte": "^7.2.2",
+    "@tailwindcss/vite": "4.1.17",
+    "astro": "^5.16.0",
+    "better-sqlite3": "^12.4.5",
+    "bootstrap": "^5.3.8",
+    "drizzle-orm": "^0.44.7",
+    "motion": "^12.23.24",
+    "sass": "^1.94.2",
+    "simple-icons": "^15.21.0",
+    "svelte": "^5.43.14",
+    "tailwindcss": "4.1.17"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "drizzle-kit": "^0.31.7"
+  }
+}

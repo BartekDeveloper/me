@@ -1,0 +1,16 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/sections/Hero.svelte';
+import Projects from '../components/sections/Projects.svelte';
+import EducationCareer from '../components/sections/EducationCareer.svelte';
+import Technologies from '../components/sections/Technologies.svelte';
+import Contact from '../components/sections/Contact.svelte';
+---
+
+<MainLayout title="Zota Portfolio">
+	<Hero client:load />
+    <Projects client:visible />
+    <EducationCareer client:visible />
+    <Technologies client:visible />
+    <Contact client:visible />
+</MainLayout>
